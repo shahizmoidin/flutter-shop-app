@@ -1,10 +1,23 @@
 # Force GitHub to recognize .dart files as Dart
 *.dart linguist-language=Dart
 
-# Mark C++ files as vendored so they don't affect the language statistics
+# Mark CMake files as vendored so they don't affect the language statistics
+*.cmake linguist-vendored
+
+# Ignore certain file extensions or directories that are influencing the language detection
 *.cpp linguist-vendored
 *.h linguist-vendored
+*.c linguist-vendored
+*.cc linguist-vendored
+*.cxx linguist-vendored
 
-# If you have a `vendor` directory, mark it as vendored as well
+# Mark certain directories as vendored
 vendor/** linguist-vendored
+node_modules/** linguist-vendored
+ios/** linguist-vendored
+android/** linguist-vendored
+
+# Optionally, ignore specific files
+CMakeLists.txt linguist-vendored
+
 
