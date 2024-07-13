@@ -1,3 +1,10 @@
+# Force GitHub to recognize .dart files as Dart
 *.dart linguist-language=Dart
-*.yaml linguist-language=YAML
-*.md linguist-language=Markdown
+
+# Mark C++ files as vendored so they don't affect the language statistics
+*.cpp linguist-vendored
+*.h linguist-vendored
+
+# If you have a `vendor` directory, mark it as vendored as well
+vendor/** linguist-vendored
+
